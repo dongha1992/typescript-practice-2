@@ -1,14 +1,17 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
-//test
+
 const config = {
 	mode: 'development',
 	entry: './src/index.tsx',
 	resolve: {
 		extensions: ['.js', '.jsx', '.ts', '.tsx'],
 		alias: {
-			'@src': path.resolve(__dirname, 'src'),
+			'@api': path.resolve(__dirname, './src/api'),
+			'@components': path.resolve(__dirname, './src/components'),
+			'@constant': path.resolve(__dirname, './src/constant'),
+			'@style': path.resolve(__dirname, './src/style'),
 		},
 	},
 	output: {
@@ -40,6 +43,7 @@ const config = {
 		],
 	},
 	devServer: {
+		contentBase: path.join(__dirname, 'dist'),
 		historyApiFallback: true,
 		inline: true,
 		port: 8080,

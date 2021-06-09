@@ -19,7 +19,12 @@ module.exports = {
 	settings: {
 		'import/resolver': {
 			alias: {
-				map: [['@src', './src']],
+				map: [
+					['@components', './src/components'],
+					['@api', './src/api'],
+					['@style', './src/style'],
+					['@constant', './src/constant'],
+				],
 			},
 		},
 	},

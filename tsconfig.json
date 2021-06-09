@@ -10,7 +10,12 @@
       "dom"
     ],
     "baseUrl": ".",
-    "paths":{"@src/*":["src/*"]},
+    "paths":{
+      "@api/*":["./src/api/*"],
+      "@components/*":["./src/components/*"],
+      "@constant/*":["./src/contants/*"],
+      "@style/*":["./src/style/*"]
+    },
     "jsx": "react",  
     "esModuleInterop": true,  
     "allowSyntheticDefaultImports": true,
@@ -18,10 +23,9 @@
     "sourceMap": true,
     "strict": true,
     "resolveJsonModule": true,
-    "moduleResolution": "node",
+    "moduleResolution": "node"
   },
   
-  "include": ["src","**/*.ts",
-    "**/*.tsx"],
+  "include": ["src","**/*.ts","**/*.tsx"],
   "exclude": ["node_modules"]
 }
