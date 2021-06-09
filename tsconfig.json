@@ -1,0 +1,27 @@
+{
+  "compilerOptions": {
+    "allowJs": true,
+    "lib": [
+      "es5", 
+      "es2015",
+      "es2016",
+      "es2017",
+      "es2020",
+      "dom"
+    ],
+    "baseUrl": ".",
+    "paths":{"@src/*":["src/*"]},
+    "jsx": "react",  
+    "esModuleInterop": true,  
+    "allowSyntheticDefaultImports": true,
+    "isolatedModules": true,
+    "sourceMap": true,
+    "strict": true,
+    "resolveJsonModule": true,
+    "moduleResolution": "node",
+  },
+  
+  "include": ["src","**/*.ts",
+    "**/*.tsx"],
+  "exclude": ["node_modules"]
+}
